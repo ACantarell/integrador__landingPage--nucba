@@ -74,10 +74,10 @@ html{
 .login__container a{
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color:white;
   font-weight: 900; 
 }
 
 .login__container a:hover{
-  color: white;
+  color: rgb(154, 102, 189);
 }
