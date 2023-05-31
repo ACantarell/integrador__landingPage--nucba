@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/earth.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register__container{
+  height: 600px;
+  width: 500px;
+  padding: 2rem;
+  background: #486d92;
+  display: flex;
+  flex-direction:column ;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation: backInLeft 1.3s ease;
+}
+
+@keyframes backInLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.register{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.register:hover{
+  background-color: #857fe2;
+  color: white;
+}
+
+.login__container p{
+  font-size: 1rem;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
+.login__container p a{
+  text-decoration: none;
+  color: rgb(143, 43, 63);
+  border-bottom: 1px solid #486d92;
+}
+
+.btn{
+    padding:1rem 3rem;
+  outline: none;
+  background-image: linear-gradient(
+    to right,
+    #2b5876 0%,
+    #4e4376 51%,
+    #2b5876 100%
+  );
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 100% auto;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
