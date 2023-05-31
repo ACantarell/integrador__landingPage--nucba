@@ -208,7 +208,7 @@ html {
 /* CARDS */
 
 #cards {
-  /* padding: 3rem; */
+  padding: 3rem;
   width: 100%;
   background-color: black;
   display: grid;
@@ -350,10 +350,12 @@ html {
     transition: all 0.4s linear;
   }
 
+
   #hero {
     margin: 0;
     padding: 0;
   }
+
 
   .hero__container {
     width: 100%;
@@ -441,7 +443,6 @@ html {
     gap: 4rem;
     transform: translate(200%);
     transition: all 0.4s linear;
-    cursor: pointer;
   }
 
   .navbar i {
@@ -517,9 +518,19 @@ html {
 }
 
 @media (max-width: 992px) {
-  .hero__container {
+
+  #hero{
+    display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+    
+  .hero__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
     margin: 0;
   }
@@ -598,12 +609,26 @@ html {
 }
 
 @media (max-width: 1200px) {
-  .hero__container {
-    margin-left: 2rem;
+
+
+  #hero{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
   }
+  
+  .hero__container {
+    margin-top: 5rem;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
 
   .hero__title span {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .about__description {
@@ -644,45 +669,3 @@ html {
   }
 }
 
-@media (max-width: 1400px) {
-  .hero__container {
-    margin-left: 4rem;
-  }
-
-  .hero__title span {
-    font-size: 6rem;
-  }
-
-  .about__description {
-    font-size: 1.3rem;
-  }
-
-  #cards {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  #contacto {
-    width: 100%;
-    padding-top: 4rem;
-    display: flex;
-  }
-
-  .footer__info {
-    margin: 0;
-    padding: 0;
-    gap: 0;
-  }
-
-  .footer__map iframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-  }
-}
