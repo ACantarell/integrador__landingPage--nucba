@@ -91,3 +91,11 @@ html{
   border: none;
 }
 
+@media (max-width: 480px){
+  .register__container{
+    width: 100%;
+    gap: 0.5rem;
+  }
+}
+
+ 

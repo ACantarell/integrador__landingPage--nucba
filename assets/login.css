@@ -81,3 +81,14 @@ html{
 .login__container a:hover{
   color: rgb(154, 102, 189);
 }
+
+@media (max-width: 480px){
+
+  .login__container{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+  }
+
+}
