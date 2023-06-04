@@ -53,26 +53,41 @@ html {
 }
 
 .list a {
+  position: relative;
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
   transition: all 0.3s ease-in;
 }
 
-.list a:hover {
-  border-bottom: 2px solid yellow;
-  transition: all 0.3s ease-out;
+.navbar__list li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  border-radius:1rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
 }
 
+.navbar__list li a:hover::after {
+  transform-origin: right;
+  transform: scaleX(1);
+} 
+
 .list .navbar__list--decoration {
-  color: yellow;
+  /* color: yellow; */
   font-size: 1.2rem;
 }
 
-.list .navbar__list--decoration:hover {
-  border-bottom: 1px solid var(--second-color);
+/* .list .navbar__list--decoration:hover {
+  border-bottom: 3px solid yellow;
   transition: all 0.3s ease-out;
-}
+} */
 
 .navbar__img {
   width: 3rem;
