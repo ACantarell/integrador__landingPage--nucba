@@ -333,6 +333,7 @@ html {
 
 .footer__map iframe {
   margin: 1rem;
+  height: 250px;
 }
 
 /* media queries */
