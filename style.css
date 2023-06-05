@@ -68,7 +68,7 @@ html {
   width: 100%;
   height: 2px;
   background-color: var(--text-color);
-  border-radius:1rem;
+  border-radius: 1rem;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
@@ -77,7 +77,7 @@ html {
 .navbar__list li a:hover::after {
   transform-origin: right;
   transform: scaleX(1);
-} 
+}
 
 .list .navbar__list--decoration {
   /* color: yellow; */
@@ -337,7 +337,7 @@ html {
 
 /* media queries */
 
-@media (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .navbar ul {
     background: var(--first-color);
     width: 100%;
@@ -365,12 +365,10 @@ html {
     transition: all 0.4s linear;
   }
 
-
   #hero {
     margin: 0;
     padding: 0;
   }
-
 
   .hero__container {
     width: 100%;
@@ -389,12 +387,13 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-width: 50%;
+    text-align: center;
   }
 
   .about__description {
     padding: 0;
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   .about__img {
@@ -432,7 +431,15 @@ html {
 
   .footer__contacto li,
   .footer__social li {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .footer__info {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   .footer__map {
@@ -443,9 +450,8 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .navbar ul {
-    margin: right 1rem;
     background: var(--first-color);
     width: 100%;
     height: calc(100vh - 5rem);
@@ -459,6 +465,7 @@ html {
     gap: 4rem;
     transform: translate(200%);
     transition: all 0.4s linear;
+    cursor: pointer;
   }
 
   .navbar i {
@@ -471,6 +478,11 @@ html {
     transition: all 0.4s linear;
   }
 
+  #hero {
+    margin: 0;
+    padding: 0;
+  }
+
   .hero__container {
     width: 100%;
     justify-content: center;
@@ -478,20 +490,27 @@ html {
   }
 
   .hero__title span {
-    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
   }
 
   .hero__presentation {
-    font-size: 2rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    max-width: 50%;
     text-align: center;
   }
 
+  .about__account {
+    width: 90%;
+  }
+
   .about__description {
-    font-size: 1.1rem;
+    padding: 0;
+    font-size: 1.5rem;
   }
 
   .about__img {
@@ -502,23 +521,31 @@ html {
     gap: 0.8rem;
   }
 
+  .about__btn--decoration,
+  .about__btn--standar {
+    margin: 0.5rem;
+    padding: 0.8rem;
+  }
+
   #cards {
-    padding-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .card__information {
-    width: 90%;
+    width: 48%;
   }
 
   #contacto {
+    width: 100%;
     padding-top: 4rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .footer__contacto li,
@@ -526,53 +553,66 @@ html {
     font-size: 0.8rem;
   }
 
-  .footer__map iframe {
+  .footer__info {
+    width: 50%;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+  }
+
+  .footer__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
   }
 }
 
-@media (max-width: 992px) {
 
-  #hero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+@media (min-width: 992px) and (max-width: 1199px){
 
-    
-  .hero__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+  
+  #hero {
     margin: 0;
+    padding: 0;
   }
 
-  .hero__title span {
-    font-size: 2rem;
-  }
-
-  .hero__presentation {
-    font-size: 1.5rem;
-    display: flex;
+  .hero__container {
+    width: 60%;
     justify-content: center;
     align-items: center;
-  }
-
-  #about {
-    padding: 5rem 0;
-    width: 100%;
-  }
-
-  .about__account {
     gap: 0;
   }
 
+  .hero__title span {
+    margin: 0;
+    padding: 1.2rem;
+    font-size: 7rem;
+  }
+
+  .hero__presentation {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+
+  #about{
+    padding: 12rem;
+  }
+
+  .about__account {
+    width: 90%;
+  }
+
   .about__description {
-    font-size: 1.1rem;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 
   .about__img {
@@ -580,35 +620,34 @@ html {
   }
 
   .about__btn {
-    padding: 1rem;
-    margin: 1rem;
     gap: 1rem;
   }
 
-  .about__btn--standar,
-  .about__btn--decoration {
-    margin: 1.2rem;
-    padding: 1.3rem;
+  .about__btn--decoration,
+  .about__btn--standar {
+    margin: 1rem;
+    padding: 1rem;
   }
 
   #cards {
-    width: 100%;
-    padding: 6rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .card__information {
-    width: 45%;
+    width: 48%;
   }
 
   #contacto {
     width: 100%;
     padding-top: 4rem;
     display: flex;
+    flex-direction: row;
   }
 
   .footer__contacto li,
@@ -616,72 +655,88 @@ html {
     font-size: 0.8rem;
   }
 
-  .footer__map iframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-  }
-}
-
-@media (max-width: 1200px) {
-
-
-  #hero{
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero__container {
-    margin-top: 5rem;;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-}
-
-  .hero__title span {
-    font-size: 4rem;
-  }
-
-  .about__description {
-    font-size: 1.3rem;
-  }
-
-  .about__img--decoration {
+  .footer__info {
+    width: 50%;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
-  #cards {
+  .footer__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1439px){
+
+  #hero {
     margin: 0;
     padding: 0;
-    width: 100%;
-    display: flex;
+  }
+
+  .hero__container {
+    width: 60%;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 0;
   }
+
+  .hero__title span {
+    margin: 0;
+    padding: 1.2rem;
+    font-size: 9rem;
+  }
+
+  .hero__presentation {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    width: 100%;
+    
+  }
+
 
   #contacto {
     width: 100%;
     padding-top: 4rem;
     display: flex;
+    flex-direction: row;
+  }
+
+  .footer__contacto li,
+  .footer__social li {
+    font-size: 1.3rem;
   }
 
   .footer__info {
+    width: 50%;
     margin: 0;
-    padding: 0;
-    gap: 0;
-  }
-
-  .footer__map iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30rem;
+    gap: 1rem;
   }
+
+  .footer__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+
+
 }
+
+
+
+
+
 
