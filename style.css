@@ -233,13 +233,30 @@ html {
   gap: 3rem;
 }
 
+
+
 .card__information {
   position: relative;
   width: 350px;
   height: 400px;
   border-radius: 10px;
   box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+        opacity: 0;
+    animation: fadeInUpAnimation 2s ease forwards;
 }
+
+@keyframes fadeInUpAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
 
 .card__content {
   position: relative;
@@ -369,6 +386,8 @@ html {
   #hero {
     margin: 0;
     padding: 0;
+    background-image: none;
+    background-color: black;
   }
 
   .hero__container {
@@ -482,6 +501,8 @@ html {
   #hero {
     margin: 0;
     padding: 0;
+    background-image: none;
+    background-color: black;
   }
 
   .hero__container {
@@ -571,10 +592,7 @@ html {
   }
 }
 
-
-@media (min-width: 992px) and (max-width: 1199px){
-
-  
+@media (min-width: 992px) and (max-width: 1199px) {
   #hero {
     margin: 0;
     padding: 0;
@@ -595,14 +613,12 @@ html {
 
   .hero__presentation {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    
   }
 
-
-  #about{
+  #about {
     padding: 12rem;
   }
 
@@ -671,12 +687,9 @@ html {
     align-items: center;
     width: 50%;
   }
-
-
 }
 
-@media (min-width: 1200px) and (max-width: 1439px){
-
+@media (min-width: 1200px) and (max-width: 1439px) {
   #hero {
     margin: 0;
     padding: 0;
@@ -697,12 +710,10 @@ html {
 
   .hero__presentation {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    
   }
-
 
   #contacto {
     width: 100%;
@@ -731,13 +742,4 @@ html {
     align-items: center;
     width: 50%;
   }
-
-
-
 }
-
-
-
-
-
-
